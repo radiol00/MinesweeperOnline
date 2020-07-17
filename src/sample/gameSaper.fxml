@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color:#cccccc;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.GameController">
+  <children>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/flagCounter.png" />
+              </image>
+            </ImageView>
+            <TextField fx:id="flagCounter" editable="false" maxHeight="25.0" maxWidth="35" minHeight="25.0" minWidth="35" prefHeight="25.0" prefWidth="35">
+              <HBox.margin>
+                <Insets right="25.0" />
+              </HBox.margin>
+            </TextField>
+            <Button fx:id="faceButton" mnemonicParsing="false" text="">
+              <HBox.margin>
+                <Insets right="75.0" />
+              </HBox.margin>
+            </Button>
+          </children>
+          <VBox.margin>
+            <Insets bottom="25.0" top="25.0" />
+          </VBox.margin>
+        </HBox>
+        <Pane fx:id="field" prefHeight="-1.0" prefWidth="-1.0">
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+        </Pane>
+        <HBox prefHeight="-1.0" prefWidth="-1.0" />
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

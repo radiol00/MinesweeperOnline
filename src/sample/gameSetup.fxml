@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="350.0" prefWidth="450.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab fx:id="tabKlient" closable="false" disable="false" text="Klient">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="450.0">
+              <children>
+                <RadioButton layoutX="26.0" layoutY="120.0" mnemonicParsing="false" onAction="#diffBeg" selected="true" text="Początkujący&#10;10 min&#10;Siatka 9 x 9 pól">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="diffLvl" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton layoutX="26.0" layoutY="185.0" mnemonicParsing="false" onAction="#diffInter" text="Średniozaawansowany&#10;40 min&#10;Siatka 16 x 16 pól" toggleGroup="$diffLvl" />
+                <RadioButton layoutX="26.0" layoutY="257.0" mnemonicParsing="false" onAction="#diffExp" text="Zaawansowany&#10;99 min&#10;Siatka 16 x 30 pól" toggleGroup="$diffLvl" />
+                <RadioButton layoutX="225.0" layoutY="119.0" mnemonicParsing="false" onAction="#customDiff" text="Niestandardowe" toggleGroup="$diffLvl" />
+                <TextField fx:id="fieldHeight" disable="true" layoutX="331.0" layoutY="156.0" prefWidth="64.0" />
+                <TextField fx:id="fieldWidth" disable="true" layoutX="331.0" layoutY="188.0" prefWidth="64.0" />
+                <TextField fx:id="fieldMines" disable="true" layoutX="331.0" layoutY="220.0" prefWidth="64.0" />
+                <Label layoutX="225.0" layoutY="159.0" text="Wysokość (9-24):" />
+                <Label layoutX="225.0" layoutY="191.0" text="Szerokość (9-30):" />
+                <Label layoutX="225.0" layoutY="223.0" text="Ilość min (10-690):" />
+                <Label layoutX="31.0" layoutY="50.0" text="Server IP:" />
+                <Label layoutX="222.0" layoutY="50.0" text="Server Port:" />
+                <TextField id="fieldHeight" fx:id="cserverIP" layoutX="83.0" layoutY="47.0" prefWidth="129.0" />
+                <TextField id="fieldHeight" fx:id="cserverPort" layoutX="284.0" layoutY="47.0" prefWidth="64.0" />
+                <Button fx:id="cconnectButton" layoutX="367.0" layoutY="48.0" mnemonicParsing="false" onAction="#cconnect" text="Connect" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabServer" closable="false" text="Server">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="sserverPort" layoutX="109.0" layoutY="37.0" prefWidth="69.0" />
+                <Label layoutX="42.0" layoutY="40.0" text="Server Port:" />
+                <TextArea fx:id="sLog" editable="false" layoutX="42.0" layoutY="83.0" prefHeight="215.0" prefWidth="354.0" wrapText="true" />
+                <Button fx:id="slistenButton" layoutX="256.0" layoutY="36.0" mnemonicParsing="false" onAction="#slistenPort" text="Listen" />
+                <Button id="slistenButton" fx:id="sstopButton" disable="true" layoutX="326.0" layoutY="36.0" mnemonicParsing="false" onAction="#sstopListen" text="Stop" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
